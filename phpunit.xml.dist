@@ -11,7 +11,7 @@
          stopOnFailure="false">
     <testsuites>
         <testsuite name="antidot-fw Test Suite">
-            <directory>tests</directory>
+            <directory>test</directory>
         </testsuite>
     </testsuites>
     <filter>
