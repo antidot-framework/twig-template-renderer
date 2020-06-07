@@ -8,6 +8,7 @@ use Psr\Container\ContainerInterface;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 use Twig\TwigFilter;
+use Twig\TwigFunction;
 use function getcwd;
 
 class TwigEnvironmentFactory
@@ -20,6 +21,9 @@ class TwigEnvironmentFactory
 
         foreach ($config['filters'] ?? [] as $filterName => $filter) {
             $environment->addFilter(new TwigFilter($filterName, $filter));
+        }
+        foreach ($config['functions'] ?? [] as $functionName => $function) {
+            $environment->addFunction(new TwigFunction($functionName, $function));
         }
         foreach ($config['extensions'] ?? [] as $extension) {
             $environment->addExtension($container->get($extension));

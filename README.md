@@ -51,6 +51,10 @@ $config = [
             // 'name' => PHPCallableClass::class,
             // 'some_function' => 'php_some_function,
         ],
+        'functions' => [
+            // 'name' => PHPCallableClass::class,
+            // 'some_function' => 'php_some_function,
+        ],
     ],
 ];
 ```
