@@ -4,7 +4,6 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
 Fast Router adapter for Antidot Framework
@@ -62,15 +61,14 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [ico-version]: https://img.shields.io/packagist/v/antidot-fw/twig-template-renderer.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/antidot-fw/twig-template-renderer/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/antidot-fw/twig-template-renderer.svg?style=flat-square
+[ico-travis]: https://scrutinizer-ci.com/g/antidot-framework/twig-template-renderer/badges/coverage.png?b=master
+[ico-scrutinizer]: https://scrutinizer-ci.com/g/antidot-framework/twig-template-renderer/badges/quality-score.png?b=master
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/antidot-fw/twig-template-renderer.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/antidot-fw/twig-template-renderer.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/antidot-fw/twig-template-renderer
 [link-travis]: https://travis-ci.org/antidot-fw/twig-template-renderer
 [link-scrutinizer]: https://scrutinizer-ci.com/g/antidot-fw/twig-template-renderer/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/antidot-fw/twig-template-renderer
 [link-downloads]: https://packagist.org/packages/antidot-fw/twig-template-renderer
 [link-author]: https://github.com/kpicaza
 [link-contributors]: ../../contributors
