@@ -8,15 +8,16 @@ use Psr\Container\ContainerInterface;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 use Twig\TwigFilter;
+use function getcwd;
 
 class TwigEnvironmentFactory
 {
     public function __invoke(ContainerInterface $container): Environment
     {
         $config = $container->get('config')['template'];
-        $loader = new FilesystemLoader($config['template']);
-
+        $loader = new FilesystemLoader(getcwd() . '/' . $config['template_path'], '__main__');
         $environment = new Environment($loader, $config);
+
         foreach ($config['filters'] ?? [] as $filterName => $filter) {
             $environment->addFilter(new TwigFilter($filterName, $filter));
         }

@@ -6,7 +6,7 @@ namespace Antidot\Render\Twig\Container\Config;
 
 use Antidot\Render\TemplateRenderer;
 use Antidot\Render\Twig\Container\TwigEnvironmentFactory;
-use Antidot\Render\Twig\TwigTemplateRenderer;
+use Antidot\Render\Twig\Container\TwigTemplateRendererFactory;
 use Twig\Environment;
 
 class ConfigProvider
@@ -24,9 +24,7 @@ class ConfigProvider
         return [
             'factories' => [
                 Environment::class => TwigEnvironmentFactory::class,
-            ],
-            'services' => [
-                TemplateRenderer::class => TwigTemplateRenderer::class,
+                TemplateRenderer::class => TwigTemplateRendererFactory::class,
             ],
         ];
     }

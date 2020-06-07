@@ -8,8 +8,9 @@ class TwigConfig
 {
     public const DEFAULT_TWIG_CONFIG = [
         'debug' => false,
+        'file_extension' => 'twig',
         'charset' => 'utf-8',
-        'templates' => 'templates',
+        'template_path' => 'templates',
         'cache' => 'var/cache/twig',
         'auto_reload' => false,
         'autoescape' => 'html',
