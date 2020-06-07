@@ -25,7 +25,7 @@ class TwigTemplateRendererTest extends TestCase
         );
         $this->twig->expects($this->once())
             ->method('render')
-            ->with('app::index', ['name' => 'Koldo'])
+            ->with('app/index.twig', ['name' => 'Koldo'])
             ->willReturn('');
         $renderer->render('app::index', ['name' => 'Koldo']);
     }
