@@ -6,7 +6,7 @@
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Fast Router adapter for Antidot Framework
+Twig Template Renderer for Antidot Framework
 
 ## Install
 
@@ -26,11 +26,71 @@ See factory classes at `src/Container`.
 
 ## Config
 
-Coming soon
+```php
+<?php
+
+declare(strict_types=1);
+
+$config = [
+    'template' => [
+        'debug' => false,
+        'file_extension' => 'twig',
+        'charset' => 'utf-8',
+        'template_path' => 'templates',
+        'cache' => 'var/cache/twig',
+        'auto_reload' => false,
+        'autoescape' => 'html',
+        'strict_variables' => true,
+        'globals' => [
+            // 'name' => 'value',
+        ],
+        'extensions' => [
+            // EtensionClassName::class,
+        ],
+        'filters' => [
+            // 'name' => PHPCallableClass::class,
+            // 'some_function' => 'php_some_function,
+        ],
+    ],
+];
+```
 
 ## Usage
 
-Coming soon
+See full [Twig documentation](https://twig.symfony.com/doc/3.x/) for more detail.
+
+### In a request handler
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Antidot\Render\TemplateRenderer;
+use Laminas\Diactoros\Response\HtmlResponse;
+use Psr\Http\Server\RequestHandlerInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseInterface;
+
+class SomeHandler implements RequestHandlerInterface
+{
+    private TemplateRenderer $template;
+
+    public function __construct(TemplateRenderer $template) 
+    {
+        $this->template = $template;
+    }
+
+    public function handle(ServerRequestInterface $request) : ResponseInterface
+    {
+        return new HtmlResponse(
+            $this->template->render('index.html', [
+                'name' => 'Koldo ;-D',
+            ])
+        );
+    }
+}
+```
 
 ## Change log
 
