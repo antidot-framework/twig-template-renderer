@@ -23,7 +23,7 @@
         "twig/twig": "^3.0"
     },
     "require-dev": {
-        "phpstan/phpstan": "^0.12.25",
+        "phpstan/phpstan": "^0.12.25 || ^1.0.0",
         "phpunit/phpunit" : "^9.0",
         "squizlabs/php_codesniffer": "^3.5"
     },
