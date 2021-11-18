@@ -11,4 +11,7 @@
 
     <!-- Use the PSR2 Standard-->
     <rule ref="PSR2" />
+
+    <!-- Paths to check -->
+    <file>src</file>
 </ruleset>
